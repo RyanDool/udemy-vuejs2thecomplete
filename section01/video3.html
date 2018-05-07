@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+		<meta name="MobileOptimized" content="width">
+		<meta name="HandheldFriendly" content="true">
+		<title>Udemy VueJS</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-on:input="changeTitle">
+			<p>{{title}}</p>
+		</div>
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					title: "Hello World!"
+				},
+				methods: {
+					changeTitle: function(event) {
+						this.title = event.target.value;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
