@@ -26,3 +26,28 @@ Section 2 Lecture 16
 Use directive v-on to allow user interaction for instance something happens onClick 
 <button v-on:click="someFunction">Click This Button</button>
 
+
+Section 2 Lecture 18
+$event is a built in event object, DO NOT overwrite or change it. example: 
+<button v-on:click="increase(2, $event)">Click Me</button>
+You can pass $event through to be used in the function if needed.
+
+
+Section 2 Lecture 19
+can use .stop to stop propagation instead of stopPropagation something like this...
+<p v-on:mousemove="updateCoords">
+	Coordinates: {{x}} / {{y}}
+	- <span v-on:mousemove.stop="">DEAD SPOT</span>
+</p>
+v-on:mousemove.stop="" will stop the function from running for that element.
+CAN ALSO USE .prevent to prevent propagation OR even chain them together lik so...
+<span v-on:mousemove.stop.prevent="">DEAD SPOT</span>
+
+
+Section 2 Lecture 20 - KEY MODIFIERS
+key modifer similar to event modifiers, just append the key to the key event like so....
+<input type="text" v-on:keyup.enter="alertMe">
+
+
+
+
