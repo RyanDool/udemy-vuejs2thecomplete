@@ -1,0 +1,28 @@
+VueJS Notes
+
+
+Section 2 Lecture 12-13
+You can NOT use curly braces in ANY html attributes. 
+CURLY BRACES CAN ONLY BE USED WHERE TEXT IS PLACED
+For html attributes use v-bind e.q.
+<a v-bind:href="link">{{ linkText }}</a>
+That data being bound are stored in the VueJs instance 
+
+
+Section 2 Lecture 14
+If you wish to use the first iteration of data that later changes in the instance use
+v-once, this will use the intial value.
+
+
+Section 2 Lecture 15
+VueJs ESCAPES html elements, to prevent cross-site scripting attacks. so you cannot pass html through as a data value. 
+Instead use a directive!
+v-html
+<p v-html="htmlLink"></p>
+NOTE: use v-html carefully, if it is passing data from a user interaction it opens up the possibility of cross-site attacks.
+
+
+Section 2 Lecture 16
+Use directive v-on to allow user interaction for instance something happens onClick 
+<button v-on:click="someFunction">Click This Button</button>
+
