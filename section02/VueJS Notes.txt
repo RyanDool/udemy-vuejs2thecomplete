@@ -50,10 +50,12 @@ key modifer similar to event modifiers, just append the key to the key event lik
 
 
 Section 2 Lecture 21 - WRITING JAVASCRIPT IN TEMPLATES
-Can write simple valid javascript statements (no if's, else's, loops, etc.) such as:
+Can write simple valid javascript expressions (no if's, else's, loops, etc.) such as:
 <button v-on:click="counter++">Click Me</button> 
-*NOTE YOU CAN DO TERNARY STATEMENTS*
+*NOTE YOU CAN DO TERNARY EXPRESSIONS*
 <p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+*NOTE CANNOT USE STATEMENTS*
+<p>{{ var a = 1 }}</p>
 
 
 Section 2 Lecture 22 - TWO-WAY-BINDING
