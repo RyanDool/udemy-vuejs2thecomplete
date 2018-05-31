@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+		<meta name="MobileOptimized" content="width">
+		<meta name="HandheldFriendly" content="true">
+		<title>Udemy VueJS</title>
+		<script src="../assets/js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button v-on:click="increase(2, $event)">Click Me</button>
+			<button v-on:click="counter++">Click Me</button>
+			<p>{{counter * 2 > 10 ? 'Greater than 10' : 'Less than 10'}}</p>
+			<p v-on:mousemove="updateCoords">
+				Coordinates: {{x}} / {{y}}
+				<!-- - <span v-on:mousemove="dummy">DEAD SPOT</span> -->
+				- <span v-on:mousemove.stop="">DEAD SPOT</span>
+			</p>
+		</div>
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					counter: 0,
+					x: 0,
+					y: 0
+				},
+				methods: {
+					increase: function(step, event){
+						this.counter += step;
+					},
+					updateCoords: function(event){
+						this.x = event.clientX;
+						this.y = event.clientY;
+					}/*,
+					dummy: function(event){
+						event.stopPropagation();
+					}*/
+
+				}
+			});
+		</script>
+	</body>
+</html>

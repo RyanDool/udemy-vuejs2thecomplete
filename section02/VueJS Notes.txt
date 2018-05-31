@@ -49,5 +49,35 @@ key modifer similar to event modifiers, just append the key to the key event lik
 <input type="text" v-on:keyup.enter="alertMe">
 
 
+Section 2 Lecture 21 - WRITING JAVASCRIPT IN TEMPLATES
+Can write simple valid javascript statements (no if's, else's, loops, etc.) such as:
+<button v-on:click="counter++">Click Me</button> 
+*NOTE YOU CAN DO TERNARY STATEMENTS*
+<p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10' }}</p>
+
+
+Section 2 Lecture 22 - TWO-WAY-BINDING
+Use the v-model attribute with the property you wish to bind. 
+	<div id="app">
+		<input type="text" v-model="name">
+		<p>{{ name }}</p>
+	</div>
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				name: Ryan
+			}
+		});
+	</script>
+
+
+Section 2 Lecture 23 - REACTING TO CHANGES WITH COMPUTED PROPERTIES
+
+
+
+
+
+
 
 
